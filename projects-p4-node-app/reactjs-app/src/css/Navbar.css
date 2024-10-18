@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.navbar {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the navbar width 100% of the container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  z-index: 1000; /* Ensure the navbar stays on top of other content */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  position: relative;
+}
+
+.burger-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.burger-content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #444;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin: 0; /* Ensure no margin issues */
+}
+
+.dropdown {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0; /* Remove any extra padding */
+}
+
+.dropbtn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 100%; /* Position dropdown to the left */
+  top: 0;
+  background-color: #555;
+  min-width: 150px;
+  z-index: 1;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin: 0; /* Ensure no margin issues */
+  border: none; /* Remove borders */
+  padding: 0; /* Remove any extra padding */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.dropdown-content a:hover {
+  background-color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-items {
+    width: 100%; /* Ensure nav items take up full width */
+    justify-content: space-between;
+  }
+
+  .burger-content {
+    width: 100%; /* Make dropdown content take up full width */
+    right: 0;
+  }
+
+  .dropdown-content {
+    position: static; /* Disable absolute positioning for mobile */
+    width: 100%; /* Make dropdown content take up full width */
+  }
+}

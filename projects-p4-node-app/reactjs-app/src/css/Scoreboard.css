@@ -1,0 +1,48 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .info {
+    text-align: center;
+  }
+  
+  .reset {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .sb-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button button:hover {
+    background-color: #0056b3;
+  }
+  
+  
